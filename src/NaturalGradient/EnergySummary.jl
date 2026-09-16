@@ -148,7 +148,7 @@ function EnergySummary(θ::ParameterTypes, Eks_; sample_nr=100, timer=TimerOutpu
         Eks = out[:Eks]
     else error("Oks_and_Eks should return Dict with key :Eks") end
     if haskey(out, :Oks)
-        warning("Oks should not be returned by the Eks function and will be ignored.")
+        warn("Oks should not be returned by the Eks function and will be ignored.")
     end
     if haskey(out, :weights)
         kwargs[:importance_weights] = out[:weights]
